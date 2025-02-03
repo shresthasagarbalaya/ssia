@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SSIA</title>
+</head>
+<body>
+<h1>CH9 ex2</h1>
+
+
+<form action="/product/add" method="post">
+    <span>Name:</span>
+    <span><label><input name="name" type="text"/>
+    </label></span>
+    <span><button type="submit">Add</button></span>
+    <input th:name="${_csrf.parameterName}"
+           th:value="${_csrf.token}"
+           type="hidden"/>
+</form>
+
+</body>
+</html>
